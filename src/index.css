@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    /* Precision Slate & Emerald Tokens */
+    --surface-canvas: #F8FAFC;
+    --surface-card: #FFFFFF;
+    --surface-muted: #F1F5F9;
+    --border-subtle: #E2E8F0;
+    --border-strong: #CBD5E1;
+
+    --text-primary: #0F172A;
+    --text-secondary: #334155;
+    --text-muted: #64748B;
+
+    --emerald-primary: #10B981;
+    --emerald-active: #059669;
+    --emerald-deep: #006C49;
+    --emerald-tint: #D1FAE5;
+
+    --indigo-primary: #6366F1;
+    --indigo-deep: #4338CA;
+    --indigo-tint: #EEF2FF;
+
+    --amber-primary: #F59E0B;
+    --amber-deep: #B45309;
+    --amber-tint: #FEF3C7;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--surface-canvas);
+    color: var(--text-primary);
+  }
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+.elevation-1 {
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+}
+
+.elevation-interactive:hover {
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+}
+
+.elevation-2 {
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.06);
+}
+
+.elevation-3 {
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.15), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
+}
+
+/* Subtle custom scrollbars for high-density POS panes */
+.pos-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.pos-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.pos-scroll::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+.pos-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt,
+  #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}

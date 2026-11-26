@@ -1,0 +1,6 @@
+{
+  "name": "KassaPOS — Sistem Kasir & Manajemen Toko",
+  "description": "Aplikasi kasir modern KassaPOS dengan tampilan register cepat, kelola produk & stok, riwayat transaksi, shift kasir, laporan penjualan, dan pengaturan struk.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

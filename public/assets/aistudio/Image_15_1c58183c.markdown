@@ -1,0 +1,212 @@
+---
+name: Precision Slate & Emerald
+colors:
+  surface: '#faf8ff'
+  surface-dim: '#d2d9f4'
+  surface-bright: '#faf8ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f2f3ff'
+  surface-container: '#eaedff'
+  surface-container-high: '#e2e7ff'
+  surface-container-highest: '#dae2fd'
+  on-surface: '#131b2e'
+  on-surface-variant: '#3c4a42'
+  inverse-surface: '#283044'
+  inverse-on-surface: '#eef0ff'
+  outline: '#6c7a71'
+  outline-variant: '#bbcabf'
+  surface-tint: '#006c49'
+  primary: '#006c49'
+  on-primary: '#ffffff'
+  primary-container: '#10b981'
+  on-primary-container: '#00422b'
+  inverse-primary: '#4edea3'
+  secondary: '#4648d4'
+  on-secondary: '#ffffff'
+  secondary-container: '#6063ee'
+  on-secondary-container: '#fffbff'
+  tertiary: '#855300'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#e29100'
+  on-tertiary-container: '#523200'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#6ffbbe'
+  primary-fixed-dim: '#4edea3'
+  on-primary-fixed: '#002113'
+  on-primary-fixed-variant: '#005236'
+  secondary-fixed: '#e1e0ff'
+  secondary-fixed-dim: '#c0c1ff'
+  on-secondary-fixed: '#07006c'
+  on-secondary-fixed-variant: '#2f2ebe'
+  tertiary-fixed: '#ffddb8'
+  tertiary-fixed-dim: '#ffb95f'
+  on-tertiary-fixed: '#2a1700'
+  on-tertiary-fixed-variant: '#653e00'
+  background: '#faf8ff'
+  on-background: '#131b2e'
+  surface-variant: '#dae2fd'
+typography:
+  display-currency:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '800'
+    lineHeight: 44px
+    letterSpacing: -0.02em
+  display-currency-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '800'
+    lineHeight: 36px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '700'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '700'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '500'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-numeric:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '700'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 13px
+    fontWeight: '600'
+    lineHeight: 18px
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 11px
+    fontWeight: '700'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-compact: 0.75rem
+  margin: 1.25rem
+  margin-mobile: 0.75rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+---
+
+## Brand & Style
+
+This design system targets modern retail operators, busy cafe baristas, and fast-paced restaurant cashiers who demand rapid, error-free transaction workflows under intense operational pressure. The interface balances high-throughput utility with visual clarity and ergonomic touch precision.
+
+The style blends utilitarian ergonomics with crisp contemporary SaaS refinement:
+- **Utilitarian Speed & Legibility:** Ample touch targets, immediate visual confirmations, high contrast ratios, and deliberate color-coding ensure actions can be registered in peripheral vision.
+- **Controlled Density:** Maximizes screen estate on desktop displays and counter touchscreens without visual clutter. Split-pane architectures keep catalog exploration and receipt/cart states persistently accessible.
+- **Physical Affordance via Micro-Elevation:** Subtle, crisp borders paired with restrained directional drop shadows distinguish interactive register buttons from passive data surfaces.
+
+## Colors
+
+The palette establishes an unmistakable hierarchy built around fast transactional throughput and high readability under varied retail lighting:
+
+- **Primary (`#10B981` / Emerald):** Reserved strictly for high-intent actions—checkout triggers, charge buttons, payment completions, and positive cash balances. Active states shift to `#059669`.
+- **Secondary (`#6366F1` / Indigo):** Designates digital operations, non-cash rails (e.g., QRIS, debit/credit cards, e-wallets), and customer loyalty syncs.
+- **Tertiary (`#F59E0B` / Amber):** Highlights active discounts, table alerts, low-stock warnings, and order modifiers.
+- **Base Surfaces & Backgrounds:** The underlying canvas uses ultra-soft slate `#F8FAFC`, while distinct cards, modal trays, and register panes sit on pure `#FFFFFF`.
+- **Borders & Dividers:** Defined using structural `#E2E8F0` to maintain tactile spatial boundaries across touchable tiles.
+- **Typography & High Contrast:** Primary values, prices, and labels employ `#0F172A`, with secondary metadata and order notes relying on `#334155` and `#64748B`.
+
+## Typography
+
+Plus Jakarta Sans provides high x-height legibility and geometric balance, optimized for rapid glances across counter distances.
+
+- **Tabular Figures (`tnum`):** All currency displays (`Rp`), numerical sums, quantities, receipt calculations, and numpad readouts must strictly enforce `font-feature-settings: 'tnum' on, 'zero' on`. This prevents horizontal jitter when running sums update in real time.
+- **Hierarchy of Scale:** Financial totals take highest priority (`display-currency`), followed by active line items and category filters. Supporting receipt details utilize `body-sm` and `label-sm` in uppercase styling for quick ledger scanning.
+
+## Layout & Spacing
+
+The terminal layout uses a persistent dual-pane model optimized for 16:9, 16:10, and 4:3 touch displays:
+
+- **Desktop & POS Displays (≥1024px):** Fixed split layout. The catalog grid occupies a flexible 60–65% width with multi-category tabs and product tiles. The cart/billing slip occupies a fixed 35–40% right-hand pane containing order items, instant tender shortcuts, and numpad drawers.
+- **Tablets (768px – 1023px):** Collapsible split view or tab-switchable layout (Catalog vs. Active Order Slip) with a sticky bottom summary dock showing running order total and a persistent checkout CTA.
+- **Handheld / Mobile (<768px):** Single-column stacked layout with quick category horizontal scrollers, compact list tiles, and a floating bottom sheet for order balance.
+- **Touch Targets:** Any interactive button, numpad key, or category chip must respect a minimum physical touch target of 44×44px (ideally 48–56px on numpads and checkout actions) to prevent mis-taps during rush periods.
+
+## Elevation & Depth
+
+Visual depth is achieved through structural border boundaries reinforced by targeted, low-opacity ambient shadows:
+
+- **Canvas (Level 0):** `#F8FAFC` base background.
+- **Surface Panels & Cards (Level 1):** `#FFFFFF` background with a crisp border: `1px solid #E2E8F0`. Shadow: `0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03)`.
+- **Interactive Tiles (Catalog Items & Action Chips):** Surface Level 1 default. On tap/hover: transitions to border `#CBD5E1` with shadow `0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.04)`.
+- **Overlays, Drawers & Numpad Trays (Level 2):** `#FFFFFF` with border `1px solid #CBD5E1` and elevated ambient shadow `0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.06)`.
+- **Floating Modals & Critical Tender Prompts (Level 3):** Modal cards sit atop a backdrop tinted with `rgba(15, 23, 42, 0.45)` with soft blur (`backdrop-filter: blur(4px)`) and shadow `0 20px 25px -5px rgba(15, 23, 42, 0.15)`.
+
+## Shapes
+
+The design system enforces a balanced roundedness scale (`roundedness: 2` / 0.5rem base radius):
+
+- **Standard Buttons, Inputs, & Cart Line Rows:** `0.5rem` (`8px`) corner radius. Maintains an orderly, engineered appearance without feeling playful or overly harsh.
+- **Product Tiles & Transaction Slip Containers (`rounded-lg`):** `1rem` (`16px`) for primary organizational cards, grouping product sets and transaction receipts cleanly.
+- **Modals, Numpad Trays & Payment Sheets (`rounded-xl`):** `1.5rem` (`24px`) for high-level modal surfaces.
+- **Status Tags, QRIS Badges, & Quick Quantity Pills:** Fully rounded / pill-shaped (`9999px`) to create clear differentiation between actionable surfaces and passive status badges.
+
+## Components
+
+### Buttons
+- **Primary Checkout Button:** Bold Emerald (`#10B981`) background, white text, bold weight, height 52px–56px. Displays cart total alongside the action label (e.g., `Charge Rp 145.000`). Active state shifts to `#059669`.
+- **Secondary Action (Digital / QRIS Tender):** Deep Indigo (`#6366F1`) or tonal tint (`#EEF2FF` with `#4F46E5` text) for secondary payment methods and customer assignment.
+- **Utility Buttons (Clear, Void, Hold):** Crisp white surface with `#E2E8F0` border, `#334155` text. Danger states (Void, Remove) use soft rose tint (`#FEE2E2`) with `#DC2626` text.
+
+### Product Catalog Cards
+- Structured grid cards featuring item name, current inventory badge, and bold currency price (`label-numeric`).
+- Active or added state introduces a `2px solid #10B981` outline and an emerald count bubble in the upper corner.
+
+### Cart / Order Slip
+- Tabular row structure displaying item name, modifiers in `body-sm` slate text, compact stepper (`-` / `qty` / `+`), and price aligned with `label-numeric`.
+- Quick-swipe or quick-action trash icon reveals on selection without cluttering standard view.
+
+### Responsive Numpad & Quick Tender
+- **Numpad Grid:** High-contrast 3×4 button grid with 0.5rem corner radii. Keys feature large, centered numbers (`headline-md`) with immediate physical active press feedback (`transform: scale(0.97)`).
+- **Exact & Cash Fast-Picks:** Quick tender chips above numpad (e.g., `Pas`, `Rp 50.000`, `Rp 100.000`) styled with soft neutral backgrounds (`#F1F5F9`) for single-tap cash entries.
+
+### Chips & Badges
+- **QRIS / Payment Tags:** Subtle indigo background (`#EEF2FF`), `#4338CA` text, pill shape, accompanied by payment provider icon.
+- **Promo & Alert Badges:** Warm amber background (`#FEF3C7`), `#B45309` text, `label-sm` uppercase.
+- **Stock Indicators:** Tonal green (`#D1FAE5`) for In Stock, light amber (`#FEF3C7`) for Low Stock, light slate (`#F1F5F9`) for Sold Out.
+
+### Input Fields & Steppers
+- Clean white inputs with a uniform `1px solid #CBD5E1` perimeter, shifting to `2px solid #10B981` upon focus.
+- Stepper controls feature large touch-friendly increment and decrement hit boxes (minimum 36×36px) flanked by tabular numeric center text.
